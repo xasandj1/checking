@@ -1909,6 +1909,7 @@ h1 {
     line-height: 8rem;
     margin-bottom: 2rem
 }
+
 @media (min-width: 320px) {
     h1 {
         color: #fff;
@@ -1919,7 +1920,7 @@ h1 {
         line-height: 48px;
         margin-bottom: 2rem
     }
-    
+
 }
 
 @media (min-width: 1440px) {
@@ -2598,6 +2599,7 @@ ul li:before {
         top: 20px
     }
 }
+
 /* 
 h1 span,
 h2 span,
@@ -3085,6 +3087,7 @@ body.inquiry-page .scrollBar {
     width: 100%;
     z-index: 50
 }
+
 @media (min-width: 320px) {
     .header {
         height: auto;
@@ -3134,7 +3137,8 @@ body.inquiry-page .scrollBar {
     width: 100%;
     z-index: 10
 }
-@media (min-width: 425px) {
+
+@media (min-width: 320px) {
     .header__new {
         left: 0;
         padding: 2rem 0;
@@ -3145,6 +3149,19 @@ body.inquiry-page .scrollBar {
         backdrop-filter: blur(15px);
     }
 }
+
+@media (min-width: 768px) {
+    .header__new {
+        left: 0;
+        padding: 2rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        backdrop-filter: blur(0px);
+    }
+}
+
 .header__new.header-hide {
     display: none !important
 }
@@ -20377,6 +20394,7 @@ body.inquiry-page .header__new-right .btn-cta {
         text-align: start;
     }
 }
+
 @media (min-width: 1024px) {
     h1 {
         color: #fff;
@@ -21643,7 +21661,7 @@ body.inquiry-page .header__new-right .btn-cta {
 
 @media (min-width: 1699px) {
     .our-solution-studio {
-        padding: 25rem 0 0;
+        padding: 10rem 0 0;
     }
 }
 
@@ -26626,6 +26644,18 @@ a:where(:not(.wp-element-button)) {
     cursor: pointer;
 }
 
+@media (min-width: 320px) {
+    .language-selector {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .language-selector {
+        display: flex;
+    }
+}
+
 .language-selector {
     position: relative;
     width: 120px;
@@ -26709,12 +26739,14 @@ a:where(:not(.wp-element-button)) {
     position: absolute;
     top: 10%;
 }
+
 @media (min-width:320px) {
     .video-container {
         top: 19%;
     }
 
 }
+
 @media (min-width:425px) {
     .video-container {
         top: 15%;
@@ -26727,6 +26759,7 @@ a:where(:not(.wp-element-button)) {
         top: 11%;
     }
 }
+
 @media (min-width:320px) {
     .cs-slider__content {
         align-items: center;
@@ -26734,6 +26767,7 @@ a:where(:not(.wp-element-button)) {
         gap: 0px;
     }
 }
+
 @media (min-width:425px) {
     .cs-slider__content {
         align-items: center;
@@ -26749,6 +26783,7 @@ a:where(:not(.wp-element-button)) {
         gap: 30px;
     }
 }
+
 @media (min-width:1024px) {
     .cs-slider__content {
         align-items: center;
@@ -26818,9 +26853,11 @@ a:where(:not(.wp-element-button)) {
         opacity: 0;
     }
 }
-#text__changer{
+
+#text__changer {
     color: #00e2c5;
 }
+
 .logo {
     height: 120px;
 }
@@ -26831,6 +26868,7 @@ a:where(:not(.wp-element-button)) {
     flex-wrap: wrap;
     margin-top: 100px;
 }
+
 @media (min-width: 425px) {
     .courses__block {
         display: flex;
@@ -26839,6 +26877,7 @@ a:where(:not(.wp-element-button)) {
         margin-top: 20px;
     }
 }
+
 @media (min-width: 768px) {
     .courses__block {
         display: flex;
@@ -26847,6 +26886,7 @@ a:where(:not(.wp-element-button)) {
         margin-top: 50px;
     }
 }
+
 @media (min-width: 1024px) {
     .courses__block {
         display: flex;
@@ -26856,6 +26896,7 @@ a:where(:not(.wp-element-button)) {
         margin-top: 100px;
     }
 }
+
 .courses__cards {
     display: flex;
     align-items: center;
@@ -26864,6 +26905,7 @@ a:where(:not(.wp-element-button)) {
     border: 1px solid #c1bcbc;
     padding: 15px;
 }
+
 @media (min-width: 425px) {
     .courses__cards {
         display: revert;
@@ -26874,6 +26916,7 @@ a:where(:not(.wp-element-button)) {
         padding: 15px;
     }
 }
+
 @media (min-width: 768px) {
     .courses__cards {
         display: flex;
@@ -26884,6 +26927,7 @@ a:where(:not(.wp-element-button)) {
         padding: 15px;
     }
 }
+
 @media (min-width: 1440px) {
     .courses__cards {
         display: flex;
@@ -26894,6 +26938,7 @@ a:where(:not(.wp-element-button)) {
         padding: 15px;
     }
 }
+
 @media (min-width: 1640px) {
     .courses__cards {
         display: flex;
@@ -26904,14 +26949,16 @@ a:where(:not(.wp-element-button)) {
         padding: 15px;
     }
 }
+
 @media (min-width: 1440px) {
-    .huawei{
-        padding:28px 0;
+    .huawei {
+        padding: 28px 0;
     }
 }
+
 @media (min-width: 1640px) {
-    .huawei{
-        padding:15px 0;
+    .huawei {
+        padding: 15px 0;
     }
 }
 
@@ -26924,6 +26971,7 @@ a:where(:not(.wp-element-button)) {
 .courses__cards-block {
     padding-left: 40px;
 }
+
 @media (min-width: 425px) {
     .courses__cards-block {
         padding-left: 20px;
@@ -27014,6 +27062,7 @@ a:where(:not(.wp-element-button)) {
     border-left: 1px solid #2a294f5d;
     padding-left: 15px !important;
 }
+
 @media (min-width: 425px) {
     .level_price_full_sale {
         margin-left: 0px;
@@ -27058,4 +27107,64 @@ a:where(:not(.wp-element-button)) {
 
 .left {
     margin-right: 80px !important;
+}
+
+.lang-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn img {
+    width: 22px;
+    height: 15px;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.lang-option {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.lang-option img {
+    width: 22px;
+    height: 15px;
+}
+
+.lang-option:hover {
+    background: #f0f0f0;
+}
+
+.lang-selector:hover .lang-menu {
+    display: block;
+}
+
+.active {
+    display: block !important;
 }
