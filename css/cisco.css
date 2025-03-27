@@ -2646,7 +2646,7 @@ body.inquiry-page .scrollBar {
 }
 
 .header__new-middle ul.new-primary li.menu-item a {
-    color: #b5b2be;
+    color: black;
     font-family: HelveticaNowDisplay,sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -2668,7 +2668,7 @@ body.inquiry-page .scrollBar {
 }
 
 .header__new-middle ul.new-primary li.menu-item svg path {
-    fill: #b5b2be
+    fill: #000
 }
 
 .header__new-middle ul.new-primary li.menu-item i.fa.fa-angle-down,.header__new-middle ul.new-primary li.menu-item svg {
@@ -2688,19 +2688,19 @@ body.inquiry-page .scrollBar {
 }
 
 .header__new-middle ul.new-primary li.menu-item:hover a {
-    color: #00e2c5
+    color: black
 }
 
 .header__new-middle ul.new-primary li.menu-item:hover svg path {
-    fill: #00e2c5
+    fill: black
 }
 
 .header__new-middle ul.new-primary li.menu-item.active a {
-    color: #00e2c5
+    color: black
 }
 
 .header__new-middle ul.new-primary li.menu-item.active svg path {
-    fill: #00e2c5
+    fill: black
 }
 
 .header__new-middle ul.new-primary li.menu-item.active:after {
@@ -4065,20 +4065,7 @@ html.has-scroll-smooth {
 }
 
 .btn-cta {
-    background: #005bff;
-    border-radius: 100vw;
-    border-radius: 0 3rem 0 0;
-    display: none;
-    height: auto;
     margin-right: 82px;
-    overflow: hidden;
-    padding: 1rem 3rem;
-    position: relative;
-    text-align: center;
-    transform: translateZ(0);
-    transition: all .3s linear;
-    width: 175px;
-    will-change: transform
 }
 
 @media (min-width: 1025px) {
@@ -4092,7 +4079,7 @@ html.has-scroll-smooth {
 }
 
 .fixed .btn-cta {
-    transform: translateY(-200px)
+    transform: translateY(6px)
 }
 
 .no-wrap {
@@ -4738,17 +4725,6 @@ html {
     #smooth-wrapper {
         padding-bottom:100vh
     }
-}
-
-.inner-masthead a:not(.btn) {
-    -webkit-text-fill-color: transparent;
-    background: #00e2c5;
-    -webkit-background-clip: text;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    display: block;
-    font-weight: 700;
-    margin-bottom: 1.5rem
 }
 
 @media (min-width: 1025px) {
@@ -20155,7 +20131,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
 
 @media (min-width: 1370px) {
     .our-solution-studio__left {
-        padding:9rem 0 5rem
+        padding:0rem 0 5rem
     }
 }
 
@@ -20180,7 +20156,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
 
 @media (min-width: 1699px) {
     .our-solution-studio__left-link {
-        margin-bottom:8rem
+        margin-bottom:45px
     }
 }
 
@@ -20191,7 +20167,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
     height: 2px;
     left: 0;
     position: absolute;
-    transform: translateY(40px);
+    transform: translateY(25px);
     width: 200px
 }
 
@@ -20203,7 +20179,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
 
 @media (min-width: 1699px) {
     .our-solution-studio__left-link:before {
-        transform:translateY(40px)
+        transform:translateY(25px)
     }
 }
 
@@ -24966,4 +24942,152 @@ a:where(:not(.wp-element-button)) {
 
 .header.fixed .header__new-left a svg #blue-logo {
     display: none
+}
+.language-selector {
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+}
+@media (min-width:320px) {
+    .language-selector {
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    .language-selector {
+        display: flex;
+    }
+}
+.selected-lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border: 2px solid #E0E7FF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.selected-lang:hover {
+    border-color: black;
+}
+
+.selected-lang img {
+    width: 24px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.selected-lang span {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-left: 8px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    border: 2px solid #E0E7FF;
+    z-index: 10;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.option img {
+    width: 24px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.option:hover {
+    background: #E3EFFF;
+}
+
+/* Dropdown ochilganda faqat tepada SVG chiqishi */
+.language-selector.active .arrow {
+    transform: rotate(180deg);
+}
+.show {
+    display: flex;
+    flex-direction: column;
+}
+.inner-masthead::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/cisco.png) top right / contain no-repeat;
+    opacity: 0.5;
+    z-index: -1; 
+}
+.inner-masthead__links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.left-side-btn {
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    box-shadow: 0px 10px 13px 0px #22222217;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 15px 0;
+    width: 300px;
+    font-weight: bold;
+    color: #2a284f;
+    text-align: center;
+    border-radius: 100px;
+    padding: 15px;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background: #00e2c5;
+}
+.left-side-btn::before {
+    content: "";
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    margin: 0 auto;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 100px;
+    z-index: -1;
+    opacity: 0; /* Boshlang‘ich holatda ko‘rinmaydi */
+    transition: opacity 0.5s, transform 0.5s; /* Smooth animation */
+    transform: scale(0); /* Boshlang‘ich holatda kichik */
+}
+
+.left-side-btn:hover::before {
+    transform: scale(40);
+    z-index: -1;
+    opacity: 1;
+    color: white;
 }

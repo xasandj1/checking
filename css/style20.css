@@ -1933,8 +1933,8 @@ h1 {
 
 @media (min-width: 1699px) {
     h1 {
-        font-size: 11rem;
-        line-height: 13.5rem
+        font-size: 8rem;
+        line-height: 9rem
     }
 }
 
@@ -3317,7 +3317,7 @@ body.inquiry-page .scrollBar {
 }
 
 .header__new-middle ul.new-primary li.menu-item svg path {
-    fill: black
+    fill: #000
 }
 
 .header__new-middle ul.new-primary li.menu-item i.fa.fa-angle-down,
@@ -3330,7 +3330,7 @@ body.inquiry-page .scrollBar {
 
     .header__new-middle ul.new-primary li.menu-item i.fa.fa-angle-down,
     .header__new-middle ul.new-primary li.menu-item svg {
-        margin-left: 1rem
+        margin-left: 1rem;
     }
 }
 
@@ -3463,7 +3463,7 @@ body.inquiry-page .scrollBar {
 .header__new-right {
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .header__new-right a svg {
@@ -4755,28 +4755,14 @@ html.has-scroll-smooth {
     backface-visibility: hidden;
     transform: translateZ(0)
 }
-
-.btn-cta {
-    background: black;
-    border-radius: 100vw;
-    border-radius: 0 3rem 0 0;
-    display: none;
-    height: auto;
-    margin-right: 30px;
-    overflow: hidden;
-    padding: 1rem 3rem;
-    position: relative;
-    text-align: center;
-    transform: translateZ(0);
-    transition: all .3s linear;
-    width: 175px;
-    will-change: transform
+.btn-cta{
+    margin-left: 82px;
 }
 
 @media (min-width: 1025px) {
     .btn-cta {
         display: inline-block;
-        margin-right: 6px;
+        margin-right: 82px;
     }
 }
 
@@ -4785,7 +4771,7 @@ html.has-scroll-smooth {
 }
 
 .fixed .btn-cta {
-    transform: translateY(-200px)
+    transform: translateY(0px)
 }
 
 .no-wrap {
@@ -12761,7 +12747,7 @@ html :where(.is-position-sticky) {
 
 @media (min-width: 1025px) {
     .card .row {
-        justify-content: space-between
+        justify-content: space-between;
     }
 }
 
