@@ -18805,7 +18805,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
 }
 
 .inner-masthead {
-    position: relative
+    position: relative;
 }
 
 .inner-masthead .row {
@@ -18822,7 +18822,7 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
 
 @media (min-width: 1699px) {
     .inner-masthead .row {
-        padding:20rem 0 15rem
+        padding:15rem 0 0rem
     }
 }
 
@@ -18865,7 +18865,9 @@ body.inquiry-page .header__new-logo,body.inquiry-page .header__new-middle .new-p
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.4rem;
-    margin-bottom: 2.5rem
+    margin-bottom: 2.5rem;
+    max-width: 1035px;
+    width: 100%;
 }
 
 @media (min-width: 1370px) {
@@ -25036,10 +25038,19 @@ a:where(:not(.wp-element-button)) {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 78%;
     background: url(../img/cisco.png) top right / contain no-repeat;
     opacity: 0.5;
     z-index: -1; 
+}
+.inner-masthead::after {
+    content: "";
+    position: absolute;
+    bottom: 18%;
+    right: 17%;
+    width: 20%;
+    height: 30%;
+    background: url(../img/frontend.png) top right / contain no-repeat;
 }
 .inner-masthead__links{
     display: flex;
@@ -25080,9 +25091,9 @@ a:where(:not(.wp-element-button)) {
     background: white;
     border-radius: 100px;
     z-index: -1;
-    opacity: 0; /* Boshlang‘ich holatda ko‘rinmaydi */
-    transition: opacity 0.5s, transform 0.5s; /* Smooth animation */
-    transform: scale(0); /* Boshlang‘ich holatda kichik */
+    opacity: 0; 
+    transition: opacity 0.5s, transform 0.5s; 
+    transform: scale(0); 
 }
 
 .left-side-btn:hover::before {
@@ -25090,4 +25101,215 @@ a:where(:not(.wp-element-button)) {
     z-index: -1;
     opacity: 1;
     color: white;
+}
+.course_buttons {
+    padding: 20px 0;
+    justify-content: space-between;
+    display: flex;
+    max-width: 800px;
+}
+.course_buttons-item:nth-child(1) {
+    width: 160px;
+    height: 160px;
+    background-size: 200%;
+    background-position: -110px -10px;
+    margin-top: 50px;
+    font-size: 24px;
+    transition: transform 0.5s ease-in-out;
+}
+.course_buttons-item:nth-child(1):hover {
+    transform: rotateY(360deg);
+}
+.course_buttons-item:nth-child(2):hover {
+    transform: rotateY(360deg);
+}
+.course_buttons-item:nth-child(3):hover {
+    transform: rotateY(360deg);
+}
+.course_buttons-item {
+    color: #fff;
+    display: inline-block;
+    padding: 20px;
+    width: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    border-radius: 1000px;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+    transition: .2s;
+    background: white;
+}
+.course_buttons-item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    z-index: -1;
+    border-radius: 1000px;
+    left: -2%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 105%;
+    background: url(../img/forBg.svg) top right / cover no-repeat;
+    background-size: 200%;
+    background-position: -110px -10px;
+}
+.course_buttons-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    z-index: -1;
+    border-radius: 1000px;
+    left: -2%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 105%;
+    background: url(../img/forBg.svg) top right / cover no-repeat;
+    background-size: 200%;
+    background-position: -110px -10px;
+}
+.course_buttons-item:nth-child(2) {
+    width: 240px;
+    height: 240px;
+    background-size: 200%;
+    background-position: -150px -130px;
+    margin-top: 150px;
+    font-size: 36px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.course_buttons-item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    z-index: -1;
+    border-radius: 1000px;
+    left: -2%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 105%;
+    background: url(../img/forBg.svg) top right / cover no-repeat;
+    background-size: 200%;
+    background-position: -210px -10px;
+}
+
+.course_buttons-item:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    background-size: 200%;
+    background-position: -210px -10px;
+    font-size: 36px;
+    transition: transform 0.5s ease-in-out;
+}
+.modal {
+    position: absolute;
+    background: linear-gradient(to right, #212121ed, #1a1a32);
+    z-index: 999;
+    left: 0;
+    overflow: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.modal-content {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    left: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal-content::before{
+    content: "";
+    background: url(../img/polygonal_gradient.png) center center / cover no-repeat;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    opacity: 0.5;
+    height: 80%;
+    width: 100%;
+}
+.modal__active {
+    opacity: 1;
+    visibility: visible;
+}
+.btn {
+    background: #00e2c5;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.course_buttons-item-answer-title {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.course_buttons-item-answer {
+    display: none;
+    -webkit-animation: left-text 1s ease-in-out;
+    animation: left-text 1s ease-in-out;
+    position: relative;
+    opacity: 1;
+    padding-left: 20px;
+}
+.course_buttons-item-answer::before {
+    content: "";
+    position: absolute;
+    -webkit-animation: line-up 2s ease-in-out;
+    animation: line-up 2s ease-in-out;
+    left: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background: white;
+}
+.course_buttons-item-answer-txt{
+    color: #fff !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+}
+.modal__section{
+    padding-bottom: 20rem;
+}
+.course_answer-close {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 15px 0;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}
+.course_buttons-item-answer-content{
+    margin: 15px 0 !important;
 }
